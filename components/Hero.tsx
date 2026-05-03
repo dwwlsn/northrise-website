@@ -141,8 +141,8 @@ export default function Hero() {
             that deliver real impact—securely,<br/>
             responsibly, and at scale.
           </p>
-          <a href="#products" className="btn-primary">
-            Explore the platform &nbsp;↗
+          <a href="#thesis" className="btn-primary">
+            Learn more about us &nbsp;↗
           </a>
         </div>
       </div>
