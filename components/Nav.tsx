@@ -15,10 +15,10 @@ export default function Nav() {
       </a>
 
       <ul className="nav-links">
-        <li><a href="/#thesis">Platform</a></li>
-        <li><a href="/#model">Solutions</a></li>
+        <li><a href="/#thesis">Thesis</a></li>
+        <li><a href="/#model">Approach</a></li>
+        <li><a href="/#products">Products</a></li>
         <li><a href="/#about">About</a></li>
-        <li><a href="/#products">Resources</a></li>
       </ul>
     </nav>
   );
