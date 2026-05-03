@@ -56,26 +56,14 @@ nav {
 
 .nav-logo {
   display: flex;
-  align-items: flex-end;
-  gap: 1px;
+  align-items: center;
   text-decoration: none;
-  line-height: 1;
 }
 
-.nav-mark {
+.nav-logo-img {
   width: auto;
-  height: 30px;
-  margin-bottom: -2px; /* aligns N's bottom with cap baseline of "ORTHRISE" */
-}
-
-.nav-wordmark {
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--white);
-  text-transform: uppercase;
-  line-height: 1;
+  height: 36px;
+  display: block;
 }
 
 .nav-links {

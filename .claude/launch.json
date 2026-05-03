@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "northrise-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "C:\\Users\\Dave\\Documents\\Claude\\Projects\\Northrise\\northrise-website"],
+      "port": 3000
+    }
+  ]
+}
