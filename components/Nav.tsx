@@ -17,11 +17,11 @@ export default function Nav() {
           {/* axis line — thin, through the center of the N */}
           <line x1="7" y1="3" x2="7" y2="30" stroke="#FAFAF8" strokeWidth="0.55" strokeOpacity="0.65" strokeLinecap="round"/>
           {/* N — left vertical */}
-          <line x1="1.5" y1="18" x2="1.5" y2="30" stroke="#FAFAF8" strokeWidth="1.3" strokeLinecap="square"/>
+          <line x1="1.6" y1="18" x2="1.6" y2="30" stroke="#FAFAF8" strokeWidth="1.8" strokeLinecap="square"/>
           {/* N — diagonal */}
-          <line x1="1.5" y1="18" x2="12.5" y2="30" stroke="#FAFAF8" strokeWidth="1.3" strokeLinecap="square"/>
+          <line x1="1.6" y1="18" x2="12.4" y2="30" stroke="#FAFAF8" strokeWidth="1.8" strokeLinecap="square"/>
           {/* N — right vertical */}
-          <line x1="12.5" y1="18" x2="12.5" y2="30" stroke="#FAFAF8" strokeWidth="1.3" strokeLinecap="square"/>
+          <line x1="12.4" y1="18" x2="12.4" y2="30" stroke="#FAFAF8" strokeWidth="1.8" strokeLinecap="square"/>
         </svg>
         <span className="nav-wordmark" aria-hidden="true">orthrise</span>
       </a>
