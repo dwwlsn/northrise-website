@@ -17,46 +17,53 @@ function drawCanvas(canvas: HTMLCanvasElement) {
   const vpX = W * 0.70;
   const vpY = H * 0.63;
 
-  /* ── Floor radial lines: fan from VP into the lower-left quadrant ── */
-  const ANGLE_START = Math.PI * 0.48; // just past straight-down-left
-  const ANGLE_END   = Math.PI * 1.55; // covers lower half
-  const NUM_RADIAL  = 48;
+  /*
+   * Angle guide (canvas coords, y-down):
+   *   0° = right,  90° = down,  180° = left,  270° = up
+   *
+   * Floor fan: from ~99° (just past straight-down) sweeping through
+   * lower-left to ~225° (upper-left direction).
+   * This keeps ALL lines in the lower/left half — no rays going upward-right.
+   */
+  const ANGLE_START = Math.PI * 0.55;  // 99°
+  const ANGLE_END   = Math.PI * 1.25;  // 225°
+  const NUM_RADIAL  = 22;
 
   for (let i = 0; i <= NUM_RADIAL; i++) {
     const t     = i / NUM_RADIAL;
     const angle = ANGLE_START + t * (ANGLE_END - ANGLE_START);
-    const len   = Math.hypot(W, H) * 1.6;
+    const len   = Math.hypot(W, H) * 1.5;
     const ex    = vpX + Math.cos(angle) * len;
     const ey    = vpY + Math.sin(angle) * len;
 
     const g = ctx.createLinearGradient(vpX, vpY, ex, ey);
-    g.addColorStop(0,    "rgba(255,138,61,0.28)");
-    g.addColorStop(0.05, "rgba(200,215,255,0.14)");
-    g.addColorStop(0.25, "rgba(180,200,255,0.055)");
-    g.addColorStop(0.7,  "rgba(180,200,255,0.018)");
-    g.addColorStop(1,    "rgba(180,200,255,0)");
+    g.addColorStop(0,    "rgba(255,138,61,0.22)");
+    g.addColorStop(0.04, "rgba(155,180,225,0.20)");
+    g.addColorStop(0.18, "rgba(140,168,220,0.09)");
+    g.addColorStop(0.50, "rgba(130,160,220,0.03)");
+    g.addColorStop(1,    "rgba(130,160,220,0)");
 
     ctx.beginPath();
     ctx.moveTo(vpX, vpY);
     ctx.lineTo(ex, ey);
     ctx.strokeStyle = g;
-    ctx.lineWidth   = 0.6;
+    ctx.lineWidth   = 0.7;
     ctx.stroke();
   }
 
-  /* ── Depth arc cross-lines (exponentially spaced, denser near horizon) ── */
-  const NUM_ARCS = 14;
-  const maxR     = Math.hypot(W, H) * 0.85;
+  /* ── Arc cross-lines — spaced to create visible grid squares ── */
+  const NUM_ARCS = 10;
+  const maxR     = Math.hypot(W, H) * 0.90;
 
   for (let i = 1; i <= NUM_ARCS; i++) {
     const t     = i / NUM_ARCS;
-    const r     = t * t * maxR;                          // quadratic: close together near VP
-    const alpha = (1 - t) * 0.13;                        // fade with distance
+    const r     = t * maxR;                              // linear: even spacing
+    const alpha = Math.max(0.02, 0.18 * (1 - t * 0.75)); // bright near VP, soft at edge
 
     ctx.beginPath();
     ctx.arc(vpX, vpY, r, ANGLE_START, ANGLE_END);
-    ctx.strokeStyle = `rgba(160,185,255,${alpha})`;
-    ctx.lineWidth   = 0.55;
+    ctx.strokeStyle = `rgba(150,175,230,${alpha.toFixed(3)})`;
+    ctx.lineWidth   = 0.65;
     ctx.stroke();
   }
 
