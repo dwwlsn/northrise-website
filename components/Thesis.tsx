@@ -15,27 +15,39 @@ export default function Thesis() {
             real people actually work.
           </p>
           <p className="section-body" style={{ marginTop: 16 }}>
-            Every product we build is a strategic asset. We capture adoption, utilization,
-            and market-specific insight that larger companies eventually need to own.
+            Every product we build is a strategic asset. The user adoption and
+            market-specific insights we generate flow back to the larger platform
+            providers whose foundational AI powers our products — extending their
+            reach into markets they couldn&apos;t serve directly.
           </p>
         </div>
 
         <div className="thesis-stat-grid">
           <div className="thesis-stat">
             <div className="thesis-stat-num">1<span>B+</span></div>
-            <div className="thesis-stat-label">people still underserved by existing AI tools</div>
+            <div className="thesis-stat-label">
+              people whose work AI hasn&apos;t been built for — yet
+            </div>
           </div>
           <div className="thesis-stat">
-            <div className="thesis-stat-num" style={{ fontSize: 36, paddingTop: 4 }}>Focus<span>.</span></div>
-            <div className="thesis-stat-label">is our competitive advantage</div>
+            <div className="thesis-stat-num">1<span>:1</span></div>
+            <div className="thesis-stat-label">
+              one product, one market — built end-to-end
+            </div>
           </div>
           <div className="thesis-stat">
             <div className="thesis-stat-num">Day<span>1</span></div>
-            <div className="thesis-stat-label">useful from the first interaction</div>
+            <div className="thesis-stat-label">
+              useful from the first interaction. not the fifth.
+            </div>
           </div>
           <div className="thesis-stat">
-            <div className="thesis-stat-num">↑<span></span></div>
-            <div className="thesis-stat-label">strategic assets, not just apps</div>
+            <div className="thesis-stat-num" style={{ fontSize: 32, paddingTop: 6 }}>
+              Stand<span>alone.</span>
+            </div>
+            <div className="thesis-stat-label">
+              each product. its own brand. its own users. its own value.
+            </div>
           </div>
         </div>
       </div>

@@ -302,25 +302,43 @@ section { padding: 120px 48px; }
 
 .thesis-stat {
   background: var(--graphite);
-  padding: 32px 28px;
+  padding: 44px 36px 36px;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.thesis-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.65;
+}
+
+.thesis-stat:hover {
+  background: #232932;
 }
 
 .thesis-stat-num {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 42px;
+  font-size: 52px;
   font-weight: 300;
   color: var(--white);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 .thesis-stat-num span { color: var(--accent); }
 
 .thesis-stat-label {
   font-size: 13px;
-  color: var(--muted);
-  line-height: 1.5;
+  color: var(--muted-2);
+  line-height: 1.55;
+  max-width: 260px;
 }
 
 /* ── MODEL ──────────────────────────────────────── */
