@@ -76,7 +76,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "var(--border)", border: "1px solid var(--border)", borderTop: "none", borderRadius: "0 0 6px 6px", overflow: "hidden" }}>
+        <div className="product-coming-row">
           <div className="product-coming">
             <div className="product-coming-text">
               <strong>More products in development.</strong><br/>
@@ -84,12 +84,12 @@ export default function Products() {
             </div>
             <div className="product-coming-tag">Coming soon</div>
           </div>
-          <div className="product-coming" style={{ borderLeft: "1px solid var(--border)" }}>
+          <div className="product-coming product-coming-bordered">
             <div className="product-coming-text">
               <strong>Have a market in mind?</strong><br/>
               We&apos;re always looking for the next gap worth filling.
             </div>
-            <a href="#contact" className="btn-ghost" style={{ flexShrink: 0 }}>
+            <a href="#contact" className="btn-ghost product-coming-cta">
               Talk to us <span className="btn-ghost-arrow">→</span>
             </a>
           </div>
