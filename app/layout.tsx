@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     siteName: "Northrise",
     locale: "en_US",
     type: "website",
+    // og:image is auto-populated from app/opengraph-image.tsx
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Northrise — Applied AI. Built for people. Made to matter.",
+    description:
+      "Northrise builds focused AI products for specific users, workflows, and markets.",
+    // twitter:image falls back to opengraph-image.tsx output
   },
 };
 
